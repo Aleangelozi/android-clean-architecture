@@ -1,4 +1,5 @@
 package com.aleangelozi.core.repository
 
-class Repository {
+class Repository(private val datasource: Datasource) {
+    suspend fun getAllCharacters() = datasource.getAll()
 }
